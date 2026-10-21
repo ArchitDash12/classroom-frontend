@@ -10,21 +10,19 @@ import {
   CardTitle,
 } from "@/components/ui/card.tsx";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useForm } from "@refinedev/react-hook-form";
 import { classSchema } from "@/lib/schema.ts";
 import * as z from "zod";
 
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label.tsx";
 import {
   Select,
   SelectContent,
@@ -35,7 +33,6 @@ import {
 import { Textarea } from "@/components/ui/textarea.tsx";
 import { Loader2 } from "lucide-react";
 import UploadWidget from "@/components/upload-widget";
-import { fields } from "@hookform/resolvers/ajv/src/__tests__/__fixtures__/data.js";
 
 const Create = () => {
   const back = useBack();
@@ -102,7 +99,7 @@ const Create = () => {
 
   const bannerPublicId = form.watch('bannerCldPubId')
 
-  const setBannerImage = (file, field) => {
+  const setBannerImage = (file: any, field: any) => {
     if(file){
         field.onChange(file.url);
         form.setValue('bannerCldPubId', file.publicId, {
@@ -156,7 +153,7 @@ const Create = () => {
                       <FormControl>
                         <UploadWidget 
                             value={field.value ? { url: field.value, publicId: bannerPublicId ?? ''} : null}
-                            onChange={(file: any, field: any) => setBannerImage(file, field)}
+                            onChange={(file: any) => setBannerImage(file, field)}
                         />
                       </FormControl>
                       <FormMessage />
