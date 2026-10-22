@@ -44,6 +44,17 @@ const options: CreateDataProviderOptions = {
           if(field === 'department') params.department = value;
           if(field === 'name' || field === 'code') params.search = value;
         }
+
+        if(resource === 'classes') {
+          if((field === 'name' || field === 'search') && value) params.search = value;
+          if((field === 'subject' || field === 'subject.name') && value && value !== 'all') params.subject = value;
+          if((field === 'teacher' || field === 'teacher.name') && value && value !== 'all') params.teacher = value;
+        }
+
+        if(resource === 'users') {
+          if(field === 'role' && value) params.role = value;
+          if((field === 'name' || field === 'email') && value) params.search = value;
+        }
       })
 
       return params;
@@ -60,7 +71,7 @@ const options: CreateDataProviderOptions = {
     getTotalCount: async (response) => {
       const payLoad: ListResponse = await response.clone().json();
 
-      return payLoad.pagination?.total ?? payLoad.data?.length ?? 0;
+      return Number(payLoad.pagination?.total ?? payLoad.data?.length ?? 0);
     }
   },
 
@@ -77,6 +88,8 @@ const options: CreateDataProviderOptions = {
   }
 };
 
-const { dataProvider } = createDataProvider(BACKEND_BASE_URL, options);
+const { dataProvider } = createDataProvider(BACKEND_BASE_URL, options, {
+  retry: 0,
+});
 
 export { dataProvider };

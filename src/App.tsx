@@ -20,10 +20,10 @@ import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
 import "./App.css";
 import Dashboard from "./pages/dashboard";
 import { BookOpen, GraduationCap, Home } from "lucide-react";
-import SubjectsList from "./pages/subjects/list";
-import SubjectsCreate from "./pages/subjects/create";
-import ClassesCreate from "./pages/classes/create";
-import ClassesList from "./pages/classes/list";
+import SubjectsList from "./pages/subjects/list.tsx";
+import SubjectsCreate from "./pages/subjects/create.tsx";
+import ClassesCreate from "./pages/classes/create.tsx";
+import ClassesList from "./pages/classes/list.tsx";
 
 function App() {
   return (
