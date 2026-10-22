@@ -9,8 +9,8 @@ import { Separator } from "@/components/ui/separator";
 import { ClassDetails } from "@/types";
 import { useShow } from "@refinedev/core";
 import React from "react";
-import { AdvancedImage } from "@cloudinary/react"
-import { bannerPhoto } from "@/lib/cloudinary.js";
+import { AdvancedImage } from "@cloudinary/react";
+import { bannerPhoto } from "@/lib/cloudinary";
 
 const ClassesShow = () => {
   const { query } = useShow<ClassDetails>({ resource: "classes" });
@@ -18,7 +18,13 @@ const ClassesShow = () => {
   const classDetails = query.data?.data;
   const { isLoading, isError } = query;
 
-  if (isError || isLoading || !classDetails) {
+  const isValidClass =
+    Boolean(classDetails) &&
+    typeof classDetails === "object" &&
+    !Array.isArray(classDetails) &&
+    Boolean((classDetails as ClassDetails).name);
+
+  if (isError || isLoading || !isValidClass) {
     return (
       <ShowView className="class-view class-show">
         <ShowViewHeader resource="classes" title="Class Details" />
@@ -34,8 +40,21 @@ const ClassesShow = () => {
     );
   }
 
-  const teacherName = classDetails.teacher?.name ?? "Unknown";
-  const teachersInitials = teacherName
+  const {
+    name,
+    description,
+    status,
+    capacity,
+    bannerUrl,
+    bannerCldPubId,
+    subject,
+    teacher,
+  } = classDetails as ClassDetails;
+
+  const department = classDetails.department ?? (classDetails as any).departmnt;
+
+  const teacherName = teacher?.name ?? "Unknown";
+  const teachersInitials = (teacherName || "")
     .split(" ")
     .filter(Boolean)
     .slice(0, 2)
@@ -46,25 +65,24 @@ const ClassesShow = () => {
     teachersInitials || "NA",
   )}`;
 
-  const {
-    name,
-    description,
-    status,
-    capacity,
-    bannerUrl,
-    bannerCldPubId,
-    subject,
-    teacher,
-    department,
-  } = classDetails;
+  const classStatus = status ?? "inactive";
 
   return (
     <ShowView className="class-view class-show">
       <ShowViewHeader resource="classes" title="Class Details" />
 
       <div className="banner">
-        {bannerUrl ? (
-          <AdvancedImage alt="Class Banner" cldImg={bannerPhoto(bannerCldPubId ?? '', name)} />
+        {bannerCldPubId && name ? (
+          <AdvancedImage
+            alt={name || "Class Banner"}
+            cldImg={bannerPhoto(bannerCldPubId, name)}
+          />
+        ) : bannerUrl ? (
+          <img
+            src={bannerUrl}
+            alt={name || "Class Banner"}
+            className="w-full h-full object-cover rounded-md"
+          />
         ) : (
           <div className="placeholder" />
         )}
@@ -78,12 +96,12 @@ const ClassesShow = () => {
           </div>
 
           <div>
-            <Badge variant="outline">{capacity} spots</Badge>
+            <Badge variant="outline">{capacity ?? 0} spots</Badge>
             <Badge
-              variant={status === "active" ? "default" : "secondary"}
-              data-status={status}
+              variant={classStatus === "active" ? "default" : "secondary"}
+              data-status={classStatus}
             >
-              {status.toUpperCase()}
+              {classStatus.toUpperCase()}
             </Badge>
           </div>
         </div>
@@ -105,8 +123,8 @@ const ClassesShow = () => {
             <p>Department</p>
 
             <div>
-              <p>{department?.name}</p>
-              <p>{department?.description}</p>
+              <p>{department?.name ?? "No department assigned"}</p>
+              {department?.description && <p>{department.description}</p>}
             </div>
           </div>
         </div>
@@ -117,25 +135,27 @@ const ClassesShow = () => {
           <p>Subject</p>
 
           <div>
-            <Badge variant="outline">Code {subject?.code}</Badge>
-            <p>{subject?.name}</p>
-            <p>{subject?.description}</p>
+            {subject?.code && <Badge variant="outline">Code {subject.code}</Badge>}
+            <p>{subject?.name ?? "No subject assigned"}</p>
+            {subject?.description && <p>{subject.description}</p>}
           </div>
         </div>
 
         <Separator />
 
         <div className="join">
-            <h2>Join Class</h2>
+          <h2>Join Class</h2>
 
-            <ol>
-                <li>Ask your teacher for the invite code</li>
-                <li>Click on "Join Class" button</li>
-                <li>Paste the code and click "join"</li>
-            </ol>
+          <ol>
+            <li>Ask your teacher for the invite code</li>
+            <li>Click on "Join Class" button</li>
+            <li>Paste the code and click "join"</li>
+          </ol>
         </div>
 
-        <Button size="lg" className="w-full">Join Class</Button>
+        <Button size="lg" className="w-full">
+          Join Class
+        </Button>
       </Card>
     </ShowView>
   );

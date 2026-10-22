@@ -25,6 +25,7 @@ import SubjectsCreate from "./pages/subjects/create.tsx";
 import ClassesCreate from "./pages/classes/create.tsx";
 import ClassesList from "./pages/classes/list.tsx";
 import ClassesShow from "./pages/classes/show.tsx";
+import { ErrorBoundary } from "./components/error-boundary";
 
 
 function App() {
@@ -67,7 +68,9 @@ function App() {
                 <Route
                   element={
                     <Layout>
+                      <ErrorBoundary>
                       <Outlet />
+                    </ErrorBoundary>
                     </Layout>
                   }
                 >

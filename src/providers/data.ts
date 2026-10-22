@@ -11,19 +11,25 @@ const buildHttpError = async (response: Response): Promise<HttpError> => {
   let message = 'Request failed.';
 
   try{
-    const payLoad = (await response.json()) as { message?: string}
+    const payLoad = (await response.clone().json()) as { message?: string; error?: string };
 
-    if(payLoad?.message) message = payLoad.message
+    if(payLoad?.message) message = payLoad.message;
+    else if(payLoad?.error) message = payLoad.error;
   }
   catch{
-    ;
+    try {
+      const text = await response.clone().text();
+      if (text && text.length < 150 && !text.includes('<html')) message = text;
+    } catch {
+      // ignore
+    }
   }
 
   return {
     message,
     statusCode: response.status
-  }
-}
+  };
+};
 
 const options: CreateDataProviderOptions = {
   getList: {
@@ -55,7 +61,7 @@ const options: CreateDataProviderOptions = {
           if(field === 'role' && value) params.role = value;
           if((field === 'name' || field === 'email') && value) params.search = value;
         }
-      })
+      });
 
       return params;
     },
@@ -81,6 +87,8 @@ const options: CreateDataProviderOptions = {
     buildBodyParams: async ({ variables }) => variables,
 
     mapResponse: async (response) => {
+      if(!response.ok) throw await buildHttpError(response);
+
       const json: CreateResponse = await response.json();
 
       return json.data ?? [];
@@ -91,9 +99,18 @@ const options: CreateDataProviderOptions = {
     getEndpoint: ({ resource, id }) => `${resource}/${id}`,
 
     mapResponse: async (response) => {
+      if(!response.ok) throw await buildHttpError(response);
+
       const json: GetOneResponse = await response.json();
 
-      return json.data ?? [];
+      if (!json?.data) {
+        throw {
+          message: 'Item not found',
+          statusCode: 404
+        };
+      }
+
+      return json.data;
     }
   }
 };

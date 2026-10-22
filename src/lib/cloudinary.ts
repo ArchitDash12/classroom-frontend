@@ -13,10 +13,11 @@ const cld = new Cloudinary({
 });
 
 export const bannerPhoto = (imageCldPubId: string, name: string) => {
+  if (!imageCldPubId) {
+    return cld.image("");
+  }
 
-    if(!imageCldPubId || !name) {
-        throw new Error("ImageCldPubId and name are required for bannerPhoto");
-    } 
+  const safeName = name || "Class";
 
   return cld
     .image(imageCldPubId)
@@ -26,7 +27,7 @@ export const bannerPhoto = (imageCldPubId: string, name: string) => {
     .delivery(dpr("auto"))
     .overlay(
       source(
-        text(name, new TextStyle("roboto", 100).fontWeight("bold")).textColor(
+        text(safeName, new TextStyle("roboto", 100).fontWeight("bold")).textColor(
           "white",
         ),
       ).position(
