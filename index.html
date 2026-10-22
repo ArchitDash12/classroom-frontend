@@ -19,6 +19,38 @@
       name="twitter:image"
       content="https://refine.dev/img/refine_social.png"
     />
+    <script type="text/javascript">
+      (function (w, d, s, r, k, h, m) {
+        if (
+          w.performance &&
+          w.performance.timing &&
+          w.performance.navigation &&
+          !w.s247r
+        ) {
+          w[r] =
+            w[r] ||
+            function () {
+              (w[r].q = w[r].q || []).push(arguments);
+            };
+          h = d.createElement("script");
+          h.async = true;
+          h.setAttribute("src", s + k);
+          d.getElementsByTagName("head")[0].appendChild(h);
+          (m = window.onerror),
+            (window.onerror = function (b, c, d, f, g) {
+              m && m(b, c, d, f, g),
+                g || (g = new Error(b)),
+                (w[r].q = w[r].q || []).push(["captureException", g]);
+            });
+        }
+      })(
+        window,
+        document,
+        "//static.site24x7rum.in/beacon/site24x7rum-min.js?appKey=",
+        "s247r",
+        "bf65c93907961e2c4ccb9e69003fa6bc",
+      );
+    </script>
     <title>
       Refine - Build your React-based CRUD applications, without constraints.
     </title>
@@ -27,7 +59,10 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/index.tsx"></script>
-    <script src="https://upload-widget.cloudinary.com/latest/global/all.js" type="text/javascript"></script>
+    <script
+      src="https://upload-widget.cloudinary.com/latest/global/all.js"
+      type="text/javascript"
+    ></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
