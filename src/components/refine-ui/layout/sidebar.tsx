@@ -256,7 +256,7 @@ function SidebarHeader() {
             }
           )}
         >
-          {title.text}
+          {title?.text && title.text !== "refine Project" ? title.text : "UniManager"}
         </h2>
       </div>
 

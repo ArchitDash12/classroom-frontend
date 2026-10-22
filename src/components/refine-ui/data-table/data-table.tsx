@@ -80,8 +80,8 @@ export function DataTable<TData extends BaseRecord>({
 
   return (
     <div className={cn("flex", "flex-col", "flex-1", "gap-4")}>
-      <div ref={tableContainerRef} className={cn("rounded-md", "border")}>
-        <Table ref={tableRef} style={{ tableLayout: "fixed", width: "100%" }}>
+      <div ref={tableContainerRef} className={cn("rounded-md", "border", "overflow-x-auto", "w-full")}>
+        <Table ref={tableRef} className="min-w-full" style={{ tableLayout: "auto", minWidth: "100%" }}>
           <TableHeader>
             {getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
@@ -177,7 +177,7 @@ export function DataTable<TData extends BaseRecord>({
                             }),
                           }}
                         >
-                          <div className="truncate">
+                          <div className={cell.column.id === "actions" || cell.column.id === "details" ? "flex items-center justify-end overflow-visible whitespace-nowrap" : "truncate"}>
                             {flexRender(
                               cell.column.columnDef.cell,
                               cell.getContext()
@@ -308,6 +308,7 @@ export function getCommonStyles<TData>({
       isOverflowing.horizontal && isPinned === "left"
         ? "var(--radius)"
         : undefined,
+    minWidth: column.id === "actions" ? 130 : undefined,
     width: column.getSize(),
     zIndex: isOverflowing.horizontal && isPinned ? 1 : 0,
   };

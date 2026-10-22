@@ -25,6 +25,10 @@ type ShowButtonProps = {
     hideIfUnauthorized?: boolean;
   };
   /**
+   * Hide the button text and render only the icon
+   */
+  hideText?: boolean;
+  /**
    * `meta` property is used when creating the URL for the related action and path.
    */
   meta?: Record<string, unknown>;
@@ -35,7 +39,7 @@ export const ShowButton = React.forwardRef<
   ShowButtonProps
 >(
   (
-    { resource, recordItemId, accessControl, meta, children, onClick, ...rest },
+    { resource, recordItemId, accessControl, meta, hideText, children, onClick, title, ...rest },
     ref
   ) => {
     const { hidden, disabled, LinkComponent, to, label } = useShowButton({
@@ -51,7 +55,13 @@ export const ShowButton = React.forwardRef<
     if (isHidden) return null;
 
     return (
-      <Button {...rest} ref={ref} disabled={isDisabled} asChild>
+      <Button
+        {...rest}
+        ref={ref}
+        disabled={isDisabled}
+        title={title || (hideText ? label : undefined)}
+        asChild
+      >
         <LinkComponent
           to={to}
           replace={false}
@@ -67,9 +77,9 @@ export const ShowButton = React.forwardRef<
           }}
         >
           {children ?? (
-            <div className="flex items-center gap-2 font-semibold">
-              <Eye className="h-4 w-4" />
-              <span>{label}</span>
+            <div className="flex items-center gap-1.5 font-semibold">
+              <Eye className="h-4 w-4 shrink-0" />
+              {!hideText && <span>{label}</span>}
             </div>
           )}
         </LinkComponent>
