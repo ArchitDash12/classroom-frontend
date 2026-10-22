@@ -110,21 +110,21 @@ UniManager leverages an industry-standard stack selected for speed, developer er
 
 | Tool / Library | Badge | Purpose & Role in UniManager |
 |---|---|---|
-| **React 19** | `![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)` | Component-driven UI runtime, React 19 hooks, and concurrency primitives |
-| **Refine v5** | `![Refine](https://img.shields.io/badge/Refine_v5-0070F3?style=flat-square&logo=refine&logoColor=white)` | Headless enterprise framework providing auth, data fetching, routing, and access control |
-| **TypeScript** | `![TypeScript](https://img.shields.io/badge/TypeScript_5.8-3178C6?style=flat-square&logo=typescript&logoColor=white)` | Strict end-to-end static typing across all UI states, API contracts, and form schemas |
-| **Vite 6** | `![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=flat-square&logo=vite&logoColor=white)` | Next-generation frontend tooling with lightning-fast HMR and optimized Rollup production builds |
-| **Tailwind CSS v4** | `![Tailwind](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)` | Cutting-edge utility-first styling with modern CSS variables and container queries |
-| **shadcn/ui** | `![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white)` | Accessible, composable UI component primitives built on top of Radix UI |
-| **Radix UI** | `![Radix](https://img.shields.io/badge/Radix_UI-161618?style=flat-square&logo=radixui&logoColor=white)` | Unstyled, fully accessible interactive primitives (Dialogs, Dropdowns, Progress, Tabs, Tooltips) |
-| **TanStack Table v8** | `![TanStack Table](https://img.shields.io/badge/TanStack_Table_v8-FF4154?style=flat-square&logo=reacttable&logoColor=white)` | Headless UI table state engine powering the course catalog, user rosters, and subject directories |
-| **React Hook Form** | `![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=flat-square&logo=reacthookform&logoColor=white)` | Performant, flexible forms with minimal re-renders for class creation and user administration |
-| **Zod** | `![Zod](https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white)` | TypeScript-first schema declaration and runtime validation for all forms and API payloads |
-| **Recharts** | `![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=flat-square&logo=chartdotjs&logoColor=white)` | Composable SVG visualization library rendering 14-day enrollment curves, bar charts, and donuts |
-| **Lucide React** | `![Lucide](https://img.shields.io/badge/Lucide_Icons-F56565?style=flat-square&logo=feather&logoColor=white)` | Beautiful, consistent icon set providing academic visual cues across navigation and metrics |
-| **Sonner** | `![Sonner](https://img.shields.io/badge/Sonner-000000?style=flat-square&logo=toast&logoColor=white)` | Highly polished, non-intrusive toast notification system with progress indicators |
-| **next-themes** | `![next-themes](https://img.shields.io/badge/next--themes-8A2BE2?style=flat-square&logo=darkmode&logoColor=white)` | Flawless dark and light theme switching with system preference detection |
-| **Refine Kbar** | `![Refine Kbar](https://img.shields.io/badge/Kbar_Command_Palette-4A5568?style=flat-square&logo=windows-terminal&logoColor=white)` | Quick keyboard navigation (`Cmd+K` / `Ctrl+K`) across all resources |
+| **React 19** | [![React 19](https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/) | Component-driven UI runtime, React 19 hooks, and concurrency primitives |
+| **Refine v5** | [![Refine v5](https://img.shields.io/badge/Refine_v5-0070F3?style=flat-square&logo=refine&logoColor=white)](https://refine.dev/) | Headless enterprise framework providing auth, data fetching, routing, and access control |
+| **TypeScript** | [![TypeScript](https://img.shields.io/badge/TypeScript_5.8-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) | Strict end-to-end static typing across all UI states, API contracts, and form schemas |
+| **Vite 6** | [![Vite 6](https://img.shields.io/badge/Vite_6-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/) | Next-generation frontend tooling with lightning-fast HMR and optimized Rollup production builds |
+| **Tailwind CSS v4** | [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/) | Cutting-edge utility-first styling with modern CSS variables and container queries |
+| **shadcn/ui** | [![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/) | Accessible, composable UI component primitives built on top of Radix UI |
+| **Radix UI** | [![Radix UI](https://img.shields.io/badge/Radix_UI-161618?style=flat-square&logo=radixui&logoColor=white)](https://www.radix-ui.com/) | Unstyled, fully accessible interactive primitives (Dialogs, Dropdowns, Progress, Tabs, Tooltips) |
+| **TanStack Table v8** | [![TanStack Table v8](https://img.shields.io/badge/TanStack_Table_v8-FF4154?style=flat-square&logo=reacttable&logoColor=white)](https://tanstack.com/table/v8) | Headless UI table state engine powering the course catalog, user rosters, and subject directories |
+| **React Hook Form** | [![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=flat-square&logo=reacthookform&logoColor=white)](https://react-hook-form.com/) | Performant, flexible forms with minimal re-renders for class creation and user administration |
+| **Zod** | [![Zod](https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white)](https://zod.dev/) | TypeScript-first schema declaration and runtime validation for all forms and API payloads |
+| **Recharts** | [![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=flat-square&logo=chartdotjs&logoColor=white)](https://recharts.org/) | Composable SVG visualization library rendering 14-day enrollment curves, bar charts, and donuts |
+| **Lucide React** | [![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-F56565?style=flat-square&logo=feather&logoColor=white)](https://lucide.dev/) | Beautiful, consistent icon set providing academic visual cues across navigation and metrics |
+| **Sonner** | [![Sonner](https://img.shields.io/badge/Sonner-000000?style=flat-square&logo=toast&logoColor=white)](https://sonner.emilkowal.ski/) | Highly polished, non-intrusive toast notification system with progress indicators |
+| **next-themes** | [![next-themes](https://img.shields.io/badge/next--themes-8A2BE2?style=flat-square&logo=darkmode&logoColor=white)](https://github.com/pacocoursey/next-themes) | Flawless dark and light theme switching with system preference detection |
+| **Refine Kbar** | [![Refine Kbar](https://img.shields.io/badge/Kbar_Command_Palette-4A5568?style=flat-square&logo=windows-terminal&logoColor=white)](https://refine.dev/) | Quick keyboard navigation (`Cmd+K` / `Ctrl+K`) across all resources |
 
 ---
 
@@ -132,13 +132,13 @@ UniManager leverages an industry-standard stack selected for speed, developer er
 
 | Tool / Technology | Badge | Purpose & Role in UniManager |
 |---|---|---|
-| **Express 5** | `![Express](https://img.shields.io/badge/Express_5-000000?style=flat-square&logo=express&logoColor=white)` | High-performance Node.js HTTP server handling REST endpoints, routing, and error pipelines |
-| **Node.js (ESM)** | `![Node.js](https://img.shields.io/badge/Node.js_ESM-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)` | Modern ECMAScript module runtime powering the asynchronous backend architecture |
-| **Neon PostgreSQL** | `![Neon DB](https://img.shields.io/badge/Neon_Serverless_PG-00E599?style=flat-square&logo=postgresql&logoColor=black)` | Serverless PostgreSQL database with automated connection pooling and instant branching |
-| **Drizzle ORM** | `![Drizzle](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black)` | Type-safe SQL ORM providing relational schema declarations and zero-overhead queries |
-| **Drizzle Kit** | `![Drizzle Kit](https://img.shields.io/badge/Drizzle_Kit-2D3748?style=flat-square&logo=databricks&logoColor=white)` | Automated SQL migration generation, schema synchronization, and database inspection |
-| **Better Auth** | `![Better Auth](https://img.shields.io/badge/Better_Auth-4F46E5?style=flat-square&logo=auth0&logoColor=white)` | Session-based authentication framework handling cookies, passwords, and user identities |
-| **tsx** | `![tsx](https://img.shields.io/badge/tsx_Dev_Runtime-E34F26?style=flat-square&logo=esbuild&logoColor=white)` | Zero-config TypeScript execution engine for instantaneous development hot-reloads |
+| **Express 5** | [![Express 5](https://img.shields.io/badge/Express_5-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/) | High-performance Node.js HTTP server handling REST endpoints, routing, and error pipelines |
+| **Node.js (ESM)** | [![Node.js](https://img.shields.io/badge/Node.js_ESM-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/) | Modern ECMAScript module runtime powering the asynchronous backend architecture |
+| **Neon PostgreSQL** | [![Neon DB](https://img.shields.io/badge/Neon_Serverless_PG-00E599?style=flat-square&logo=postgresql&logoColor=black)](https://neon.tech/) | Serverless PostgreSQL database with automated connection pooling and instant branching |
+| **Drizzle ORM** | [![Drizzle ORM](https://img.shields.io/badge/Drizzle_ORM-C5F74F?style=flat-square&logo=drizzle&logoColor=black)](https://orm.drizzle.team/) | Type-safe SQL ORM providing relational schema declarations and zero-overhead queries |
+| **Drizzle Kit** | [![Drizzle Kit](https://img.shields.io/badge/Drizzle_Kit-2D3748?style=flat-square&logo=databricks&logoColor=white)](https://orm.drizzle.team/kit-docs/overview) | Automated SQL migration generation, schema synchronization, and database inspection |
+| **Better Auth** | [![Better Auth](https://img.shields.io/badge/Better_Auth-4F46E5?style=flat-square&logo=auth0&logoColor=white)](https://www.better-auth.com/) | Session-based authentication framework handling cookies, passwords, and user identities |
+| **tsx** | [![tsx](https://img.shields.io/badge/tsx_Dev_Runtime-E34F26?style=flat-square&logo=esbuild&logoColor=white)](https://github.com/privatenumber/tsx) | Zero-config TypeScript execution engine for instantaneous development hot-reloads |
 
 ---
 
@@ -146,11 +146,11 @@ UniManager leverages an industry-standard stack selected for speed, developer er
 
 | Tool / Service | Badge | Purpose & Role in UniManager |
 |---|---|---|
-| **Arcjet** | `![Arcjet](https://img.shields.io/badge/Arcjet_Shield-FF5A5F?style=flat-square&logo=shield&logoColor=white)` | Security middleware providing AI bot protection, attack shielding, and adaptive rate limiting |
-| **Cloudinary** | `![Cloudinary](https://img.shields.io/badge/Cloudinary_SDK-3448C5?style=flat-square&logo=cloudinary&logoColor=white)` | Global media CDN handling client-side image transformation, compression, and secure storage |
-| **Site24x7 APM** | `![APM Insight](https://img.shields.io/badge/APM_Insight-00A4E4?style=flat-square&logo=datadog&logoColor=white)` | Real-time backend performance telemetry, request latency monitoring, and health tracking |
-| **Render** | `![Render](https://img.shields.io/badge/Render_Hosting-46E3B7?style=flat-square&logo=render&logoColor=black)` | Continuous cloud deployment and automated SSL hosting for the Express backend service |
-| **Vercel** | `![Vercel](https://img.shields.io/badge/Vercel_Edge-000000?style=flat-square&logo=vercel&logoColor=white)` | Edge deployment platform with asset compression and SPA client-side routing rewrites |
+| **Arcjet** | [![Arcjet Security](https://img.shields.io/badge/Arcjet_Shield-FF5A5F?style=flat-square&logo=shield&logoColor=white)](https://arcjet.com/) | Security middleware providing AI bot protection, attack shielding, and adaptive rate limiting |
+| **Cloudinary** | [![Cloudinary](https://img.shields.io/badge/Cloudinary_SDK-3448C5?style=flat-square&logo=cloudinary&logoColor=white)](https://cloudinary.com/) | Global media CDN handling client-side image transformation, compression, and secure storage |
+| **Site24x7 APM** | [![APM Insight](https://img.shields.io/badge/APM_Insight-00A4E4?style=flat-square&logo=datadog&logoColor=white)](https://www.site24x7.com/apm-insight.html) | Real-time backend performance telemetry, request latency monitoring, and health tracking |
+| **Render** | [![Render](https://img.shields.io/badge/Render_Hosting-46E3B7?style=flat-square&logo=render&logoColor=black)](https://render.com/) | Continuous cloud deployment and automated SSL hosting for the Express backend service |
+| **Vercel** | [![Vercel](https://img.shields.io/badge/Vercel_Edge-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/) | Edge deployment platform with asset compression and SPA client-side routing rewrites |
 
 ---
 
@@ -250,34 +250,9 @@ sequenceDiagram
 ### 1. Executive Analytics & Institutional KPI Dashboard
 *(Visible to Administrators and Faculty)*
 
-```
-+----------------------------------------------------------------------------------------------------+
-| 🎓 UniManager  |  Overview   Classes   Subjects   Departments   Users          [Dark]  [Admin: Sarah]  |
-+----------------------------------------------------------------------------------------------------+
-| Academic Overview                                                                [🔄 Refresh] [+ Class] |
-| Real-time enrollment trends, capacity status, and institutional metrics.                           |
-|                                                                                                    |
-|  [ Total Users: 42 ]      [ Active Classes: 14 ]     [ Departments: 6 ]      [ Enrollments: 128 ]   |
-|  30 Students | 8 Faculty   Avg Fill Rate: 78%         24 Registered Subjects   +18% this month     |
-|                                                                                                    |
-|  ⚠️ CAPACITY RISK WARNINGS (Live Alert Center)                                                     |
-|  • CS101A: Introduction to Computer Systems [==============================] 50/50  CRITICAL FULL  |
-|  • AI201B: Neural Network Architectures    [========================.....] 42/50  WARNING (84%)   |
-|                                                                                                    |
-|  +---------------------------------------+  +---------------------------------------------------+  |
-|  | 📈 14-Day Enrollment Inflow (AreaChart) |  | 🏢 Class Distribution by Department (BarChart)     |  |
-|  |        /\                             |  |  Computer Science  [████████████████████] 8        |  |
-|  |       /  \    /\                      |  |  Artificial Intell [██████████████] 5             |  |
-|  |  ____/    \__/  \____                 |  |  Design & HCI      [██████████] 4                 |  |
-|  +---------------------------------------+  +---------------------------------------------------+  |
-|                                                                                                    |
-|  +---------------------------------------+  +---------------------------------------------------+  |
-|  | 👥 Institutional User Ratio (Donut)   |  | ⚡ Quick Management Operations                    |  |
-|  |  Students (71%) • Teachers (19%)      |  |  [+ New Course Batch]    [+ Register Student]     |  |
-|  |  Admins (10%)                         |  |  [+ New Department]      [+ Assign Curriculum]    |  |
-|  +---------------------------------------+  +---------------------------------------------------+  |
-+----------------------------------------------------------------------------------------------------+
-```
+<p align="center">
+  <img src="public/screenshots/dashboard-admin.png" alt="Executive Analytics & Institutional KPI Dashboard" width="100%" />
+</p>
 
 - **4 Core KPI Cards:** Real-time metrics for total student bodies, active course batches, curriculum breadth, and aggregate student enrollments.
 - **Dynamic Capacity Risk Ticker:** Instantly alerts administrators whenever any classroom surpasses 80% capacity or reaches 100% full capacity.
@@ -288,25 +263,9 @@ sequenceDiagram
 ### 2. Student Learning Portal & Weekly Timetable
 *(Visible when logged in as a Student, e.g. Liam Johnson)*
 
-```
-+----------------------------------------------------------------------------------------------------+
-| 🎓 UniManager  |  Overview   Classes                                       [Dark]  [Student: Liam]  |
-+----------------------------------------------------------------------------------------------------+
-| Welcome back, Liam! 🚀                                                                              |
-| You are enrolled in 4 academic courses. Here is your active semester schedule.                    |
-|                                                                                                    |
-| 🔑 Join Class with Invite Code: [ CS101A               ]  [ 🎟️ Join Class ]                        |
-|                                                                                                    |
-| MY ENROLLED COURSES (4)                                  WEEKLY TIMETABLE                          |
-| +-----------------------------+-------------------------+  • MON: 09:00 - 10:30                       |
-| | [BANNER: Modern Systems]    | [BANNER: AI Lab]        |    CS101: Systems Programming            |
-| | CS101 • Systems Programming | AI201 • Neural Networks |    Room 402 • Prof. Alex Rivera          |
-| | Instructor: Prof. Rivera    | Instructor: Dr. Vance   |                                          |
-| | 📅 Mon, Wed (09:00 - 10:30) | 📅 Tue, Thu (14:00)     |  • TUE: 14:00 - 15:30                       |
-| | [ Open Course Room -> ]     | [ Open Course Room -> ] |    AI201: Neural Networks                |
-| +-----------------------------+-------------------------+    Lab 3 • Dr. Marcus Vance              |
-+----------------------------------------------------------------------------------------------------+
-```
+<p align="center">
+  <img src="public/screenshots/student-portal.png" alt="Student Learning Portal & Weekly Timetable" width="100%" />
+</p>
 
 - **Frictionless Invite Bar:** Dedicated 7-character invite code input that immediately updates the student's personal roster.
 - **Active Course Grid:** High-resolution banner cards displaying teacher avatars, subject codes, weekly session pills, and quick launch links.
@@ -317,18 +276,9 @@ sequenceDiagram
 ### 3. Interactive Course Catalog & Smart Data Table
 *(Comprehensive filtering powered by TanStack Table v8)*
 
-```
-+----------------------------------------------------------------------------------------------------+
-| 🔍 Search classes, codes, instructors...   [ Department: All v ]  [ Teacher: All v ]  [ Status: Active v ] |
-+----------------------------------------------------------------------------------------------------+
-| BANNER  CLASS NAME             SUBJECT         TEACHER        CAPACITY     INVITE CODE  ACTIONS    |
-| [IMG]   Distributed Systems    CS301 (CompSci) Dr. Vance      48/50 [86%]  [ DIST89 📋]  [👁️] [✏️] [🗑️] |
-| [IMG]   Web Architecture       CS204 (CompSci) Prof. Rivera   50/50 [FULL] [ WEB77X 📋]  [👁️] [✏️] [🔒] |
-| [IMG]   UI/UX Design Systems   DES101 (Design) Elena Rostova  22/40 [55%]  [ DSGN14 📋]  [👁️] [✏️] [🗑️] |
-+----------------------------------------------------------------------------------------------------+
-| Showing 1 to 10 of 28 classes                              [<< First] [< Prev] [1] [2] [3] [Next >] |
-+----------------------------------------------------------------------------------------------------+
-```
+<p align="center">
+  <img src="public/screenshots/classes-catalog.png" alt="Interactive Course Catalog & Smart Data Table" width="100%" />
+</p>
 
 - **Multi-Faceted Filtering:** Instant query filtering across class name, instructor, subject, and status (`Active`, `Inactive`, `Archived`).
 - **URL Synchronization:** Uses Refine's `syncWithLocation` to keep filter parameters, pagination, and sorting directly reflected in browser URL search params for instant sharing and bookmarking.
@@ -339,6 +289,10 @@ sequenceDiagram
 ### 4. Class Command Center & Real-Time Capacity Meter
 *(Detailed Single Class View — `/classes/show/:id`)*
 
+<p align="center">
+  <img src="public/screenshots/class-details.png" alt="Class Command Center & Real-Time Capacity Meter" width="100%" />
+</p>
+
 - **Interactive Capacity Progress Bar:** Color shifts from Emerald Green (`<80%`) to Amber Orange (`80-99%`) to Crimson Red (`100% full`).
 - **Student Roster Administration:** Administrators can enroll students manually via dropdown selection, or remove students with an `AlertDialog` confirmation.
 - **Over-Enrollment Protection:** The enrollment button automatically disables when the cap is reached, preventing accidental administrative over-subscription.
@@ -348,6 +302,10 @@ sequenceDiagram
 
 ### 5. One-Click Role Switcher & Auth Screen
 *(Streamlined for rapid evaluation and testing)*
+
+<p align="center">
+  <img src="public/screenshots/auth-login.png" alt="One-Click Role Switcher & Auth Screen" width="100%" />
+</p>
 
 - **Pre-Configured Demo Pills:** Instant 1-click access buttons for:
   - 🛡️ **Administrator:** Sarah Mitchell (`admin@classroom.com`)
