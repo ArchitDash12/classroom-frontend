@@ -80,7 +80,7 @@ const ClassesShow = () => {
           <div>
             <Badge variant="outline">{capacity} spots</Badge>
             <Badge
-              variant={status == "active" ? "default" : "secondary"}
+              variant={status === "active" ? "default" : "secondary"}
               data-status={status}
             >
               {status.toUpperCase()}
